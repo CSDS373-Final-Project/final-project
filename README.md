@@ -1,4 +1,4 @@
-# final-project
+#Final-project
 ## Project Proposal
 
 ### Discussion of the Problem and Short Literature Review
