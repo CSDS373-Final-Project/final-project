@@ -17,8 +17,6 @@ import pandas
 def create_csv(path):
     ds = pandas.read_csv(path)
     
-    for column in ds.columns[]
-
 def main():
     if len(sys.argv) != 2:
         print("Error processing arguments, expected 2 arguments, but got ", len(sys.argv), " arguments instead.")
