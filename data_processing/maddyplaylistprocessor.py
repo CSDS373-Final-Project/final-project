@@ -18,8 +18,8 @@ import pandas
 
 def main():
     #Information created and gathered from spotify's developer portal 
-    client_id = clientdata.MADDY_ID
-    client_secret = clientdata.MADDY_SECRET
+    client_id = clientdata.CLIENT_ID
+    client_secret = clientdata.CLIENT_SECRET
     client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) #spotify object to access API
 
