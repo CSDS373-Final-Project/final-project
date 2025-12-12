@@ -19,6 +19,8 @@ Questions we want to answer:
 
 """
 
+
+
 import random
 import csv
 import sys
