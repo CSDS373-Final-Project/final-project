@@ -1,5 +1,5 @@
 """
-Name: maxannplaylistprocessor.py
+Name: maddyplaylistprocessor.py
 Author: Madison Kekic
 Takes in a playlist urls and outputs information about tracks contained in playlist into csv file
 Inputs:
@@ -11,7 +11,6 @@ Outputs:
 """
 
 import spotipy
-from spotipy.oauth2 import SpotifyClientCredential
 import clientdata
 import pandas
 
@@ -20,7 +19,7 @@ def main():
     #Information created and gathered from spotify's developer portal 
     client_id = clientdata.CLIENT_ID
     client_secret = clientdata.CLIENT_SECRET
-    client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+    client_credentials_manager = spotipy.oauth2.SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) #spotify object to access API
 
 
@@ -32,7 +31,7 @@ def main():
     #Create dataframe to concat data from multiple playlists to 
     combined_data = pandas.DataFrame()
     #List containing playlists created by Maddy- note that each playlist corresponds to a rating (1-5)
-    for url in clientdata.MAXANN_URLS:
+    for url in clientdata.MADDY_URLS:
         #Get playlist id from url
         playlist_id = url.split("/")[-1].split("?")[0]
 
@@ -65,7 +64,7 @@ def main():
             if genres:
                 track_genre=genres[0]
             else:
-                track_genres = None
+                track_genre = None
 
             #Appending data to playlist_data
             if features:
