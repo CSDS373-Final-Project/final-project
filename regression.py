@@ -40,6 +40,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn import tree
 from sklearn import linear_model
+from sklearn.ensemble import RandomForestRegressor
 
 
 filepath = sys.argv[1]
@@ -255,7 +256,7 @@ if(model == "forest" or model == "Forest"):
     #create validation from training
     training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
 
-    regr = tree.DecisionTreeRegressor()
+    regr = RandomForestRegressor()
     regr.fit(training_X, training_y)
     predictions = regr.predict(testing_X)
     MAE = mean_absolute_error(valid_y, predictions)
