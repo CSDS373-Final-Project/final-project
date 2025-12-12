@@ -236,13 +236,12 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
         for neurons in [2, 50, 75, 100, 150, 175, 200, 256]:
             network = create_network(seed, dataset, neurons)
             MAE = train_network(network, training_X, training_y, rate)
-            rate_arr.append(rate)
-            neuron_arr.append(neurons)
-            value_arr.append(MAE)
             if(MAE < MAEval):
                 MAEval = MAE
                 bestrate = rate
                 bestneurons = neurons
+
+    print(MAEval)
 
 if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #read in csv
