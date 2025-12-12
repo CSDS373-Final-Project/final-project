@@ -207,7 +207,7 @@ def isalpha_or_space(self):
     return True
 
 #Neural Net code
-if(model == "Neural Net" or model == "neural net" or model == "Neural net"):
+if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model == "N" or model == "n"):
     if torch.cuda.is_available():
         print(f"Using GPU: {torch.cuda.get_device_name(0)}")
         torch.cuda.set_device(0)
@@ -216,15 +216,14 @@ if(model == "Neural Net" or model == "neural net" or model == "Neural net"):
     dataset = pandas.read_csv(filepath)
 
     #convert non numerical data to numerical data
-    if(filepath == "seoulbike.csv"):
-        for column in dataset:
-            columnSeriesObj = dataset[column]
-            if(column != "label"):
-                first_value = dataset[column].values[0]
-                value = str(first_value)
-                if(isalpha_or_space(value)):
-                    onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
-                    dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
+    for column in dataset:
+        columnSeriesObj = dataset[column]
+        if(column != "label"):
+            first_value = dataset[column].values[0]
+            value = str(first_value)
+            if(isalpha_or_space(value)):
+                onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
+                dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
     if(minmax == True):
         dataset = scale_dataset(dataset)
@@ -245,15 +244,25 @@ if(model == "Neural Net" or model == "neural net" or model == "Neural net"):
                 bestrate = rate
                 bestneurons = neurons
 
-if(model == "forest" or model == "Forest"):
+if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #read in csv
     dataset = pandas.read_csv(filepath)
+
+    #one-hot encoding
+    for column in dataset:
+        columnSeriesObj = dataset[column]
+        if(column != "label"):
+            first_value = dataset[column].values[0]
+            value = str(first_value)
+            if(isalpha_or_space(value)):
+                onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
+                dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
     if(minmax == True):
         dataset = scale_dataset(dataset)
 
     #create training and testing data
-    training_X, training_y, testing_X, testing_y = split_data(new_file, percent, input_seed)
+    training_X, training_y, testing_X, testing_y = create_data(dataset, percent, seed)
 
     #create validation from training
     training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
