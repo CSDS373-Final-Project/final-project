@@ -1,0 +1,157 @@
+label,track_name,artist,popularity,duration,explicit,track_genre
+5,Toxic,Britney Spears,85,198800,False,pop
+5,Gabriela,KATSEYE,94,197226,False,k-pop
+5,Not Like Us,Kendrick Lamar,88,274192,True,hip hop
+5,tv off (feat. lefty gunplay),Kendrick Lamar,86,220690,True,hip hop
+5,Levitating (feat. DaBaby),Dua Lipa,82,203064,False,pop
+5,RUMBLE,Paledusk,41,281624,True,mathcore
+5,WOKE UP,XG,71,188010,False,k-pop
+5,GALA,XG,74,227175,False,k-pop
+5,LEFT RIGHT,XG,71,208065,False,k-pop
+5,HOWLING,XG,65,188702,False,k-pop
+5,PS118 - feat. Rapsody,JURIN ASAYA,61,160919,False,
+5,Ripples of Past Reverie - English Ver.,HOYO-MiX,63,186671,False,soundtrack
+5,Paparazzi - Instrumental,Xzibit,38,236600,False,west coast hip hop
+5,euphoria,Kendrick Lamar,76,383639,True,hip hop
+5,Rondo Across Countless Kalpas,HOYO-MiX,45,195333,False,soundtrack
+5,Proi Proi,HOYO-MiX,60,238378,False,soundtrack
+5,Flares of the Blazing Sun,HOYO-MiX,60,213691,False,soundtrack
+5,WHITE NIGHT,Jake Miller,57,138755,False,
+5,Speed Drive,Charli xcx,62,117809,False,hyperpop
+5,Man I Am,Sam Smith,46,187764,False,soft pop
+5,Dual-Ego - Honkai Impact 3rd Ost,Sa Dingding,41,188108,False,gufeng
+5,Nightglow - 崩坏3印象曲,Tanya Chua,47,183468,False,mandopop
+5,Wildfire,HOYO-MiX,56,218242,False,soundtrack
+5,flowers(English version),Hana Hope,35,260212,False,anime
+5,SHOOTING STAR,XG,69,203556,False,k-pop
+5,Tippy Toes,XG,60,188213,False,k-pop
+5,MASCARA,XG,63,191439,False,k-pop
+5,TGIF,XG,60,171240,False,k-pop
+5,WINTER WITHOUT YOU,XG,61,243520,False,k-pop
+5,IYKYK,XG,60,180000,False,k-pop
+5,hey now (feat. dody6),Kendrick Lamar,74,217478,True,hip hop
+5,reincarnated,Kendrick Lamar,72,275740,True,hip hop
+5,heart pt. 6,Kendrick Lamar,73,292461,True,hip hop
+5,gloria (with sza),Kendrick Lamar,71,287522,True,hip hop
+5,"Moon Halo - Honkai Impact 3Rd ""Everlasting Flames"" Animated Short Theme",HOYO-MiX,56,204054,False,soundtrack
+5,bad guy,Billie Eilish,83,194087,False,
+5,Alejandro,Lady Gaga,76,274213,False,art pop
+5,Da Capo,HOYO-MiX,52,134594,False,soundtrack
+5,Before my body is dry,Sawano Hiroyuki,29,248266,False,anime
+5,The Cruel Angel's Thesis (Director's Edit Version),高橋　洋子,64,245093,False,city pop
+5,Magia,Kalafina,44,313586,False,anime
+5,Lady Maria of the Astral Clocktower,SIE Sound Team,45,286932,False,japanese vgm
+5,Lady Maria of the Astral Clocktower,SIE Sound Team,45,286932,False,japanese vgm
+5,Cleric Beast,SIE Sound Team,48,184720,False,japanese vgm
+5,Lullaby for Mergo,SIE Sound Team,37,229320,False,japanese vgm
+5,"Mohg, Lord of Blood",Shoi Miyazawa,41,262179,False,soundtrack
+5,"Malenia, Blade of Miquella",Yuka Kitamura,42,224307,False,soundtrack
+5,Godskin Apostles,Tai Tomisawa,40,274343,False,soundtrack
+5,Rubia,Zhou Shen,54,194558,False,gufeng
+5,Honkai World Diva - Movie Ver.,Mika Kobayashi,46,189000,False,anime
+5,Regression,HOYO-MiX,48,236712,False,soundtrack
+5,Rivers In the Desert,Lyn,57,315026,False,japanese vgm
+5,NAME == Entelechy,HOYO-MiX,50,205216,False,soundtrack
+5,When Darkness Spreads,HOYO-MiX,54,118097,False,soundtrack
+5,"Coronal Radiance (From ""Honkai: Star Rail"") - Phainon Theme",tnbee,51,289000,False,japanese vgm
+5,"Night Falls, Everyone, Close Your Eyes (From ""Honkai: Star Rail"") - Evernight Theme",tnbee,42,270476,False,japanese vgm
+5,"Step Onto the Board (From ""Honkai: Star Rail"") - Cerydra Theme",tnbee,38,228413,False,japanese vgm
+5,"The Sin of Pride (From ""Honkai: Star Rail"") - Anaxa Theme",tnbee,40,193000,False,japanese vgm
+5,"Wrath of Man (From ""Honkai: Star Rail”) - Mydei Theme",tnbee,28,194000,False,japanese vgm
+5,"Deadly Romance (From ""Honkai: Star Rail"") - Aglaea Theme",tnbee,30,184000,False,japanese vgm
+5,...Baby One More Time,Britney Spears,84,211066,False,pop
+4,Gameboy,KATSEYE,76,185598,False,k-pop
+4,Dance The Night,Dua Lipa,70,176579,False,pop
+4,Your Color,HOYO-MiX,40,158379,False,soundtrack
+4,Debut,KATSEYE,84,123281,False,k-pop
+4,Touch,KATSEYE,87,129882,False,k-pop
+4,Anxiety,Doechii,80,249302,True,
+4,Born Again (feat. Doja Cat & RAYE),LISA,79,231174,True,k-pop
+4,Avant Gardener,Courtney Barnett,52,312226,False,
+4,Moonlight,Kali Uchis,80,187723,False,
+4,BOW,MFS,49,182124,True,j-rap
+4,Espresso,Sabrina Carpenter,85,175459,True,pop
+4,NEW DANCE,XG,68,198520,False,k-pop
+4,PUPPET SHOW,XG,63,199960,False,k-pop
+4,IS THIS LOVE,XG,72,155080,False,k-pop
+4,SOMETHING AIN'T RIGHT,XG,62,190666,False,k-pop
+4,IN THE RAIN,XG,65,188200,False,k-pop
+4,Sedum,Sincere,29,222066,False,j-r&b
+4,FLOWER,JISOO,69,173134,False,k-pop
+4,earthquake,JISOO,76,190806,False,k-pop
+4,ExtraL (feat. Doechii),JENNIE,72,167754,True,k-pop
+4,wacced out murals,Kendrick Lamar,72,317092,True,hip hop
+4,squabble up,Kendrick Lamar,81,157992,True,hip hop
+4,luther (with sza),Kendrick Lamar,84,177598,False,hip hop
+4,man at the garden,Kendrick Lamar,69,233173,True,hip hop
+4,"dodger blue (feat. wallie the sensei, siete7x, roddy ricch)",Kendrick Lamar,72,131240,True,hip hop
+4,peekaboo (feat. azchike),Kendrick Lamar,78,155917,True,hip hop
+4,"gnx (feat. hitta j3, youngthreat, peysoh)",Kendrick Lamar,65,193539,True,hip hop
+4,アイドル,YOASOBI,73,213233,False,j-pop
+4,MONTERO (Call Me By Your Name),Lil Nas X,71,137875,True,
+4,Lalala,Y2K,71,160626,True,
+4,Redbone,Childish Gambino,84,326933,True,
+4,Samudrartha,HOYO-MiX,48,172000,False,soundtrack
+4,WATATI (feat. Aldo Ranks) [From Barbie The Album],KAROL G,58,166882,False,reggaeton
+4,Pink,Lizzo,54,143833,False,
+4,JEWELZ,Anderson .Paak,49,174213,True,
+4,bury a friend,Billie Eilish,75,193143,False,
+4,Therefore I Am,Billie Eilish,70,174321,False,
+4,Bad Girlfriend,Anne-Marie,57,206186,True,
+4,FRIENDS,Marshmello,79,201733,True,edm
+4,New Rules,Dua Lipa,82,209320,False,pop
+4,Rude Boy,Rihanna,79,222920,True,
+4,ごめんね、いいコじゃいられない。,Miku Sawai,35,284013,False,anime
+4,Gold,Imagine Dragons,49,216813,False,
+4,Contradiction (feat. Tyler Carter),KSUKE,49,201230,False,anime
+4,LOST IN PARADISE,ALI,67,327966,False,anime
+4,Kaikai Kitan,Eve,47,219234,False,anime
+4,Crazy Over You,BLACKPINK,64,163945,False,k-pop
+4,Love To Hate Me,BLACKPINK,64,171797,False,k-pop
+4,MONEY,LISA,74,168227,True,k-pop
+4,Can't Hold Us (feat. Ray Dalton),Macklemore,80,258342,False,
+4,Thrift Shop (feat. Wanz),Macklemore & Ryan Lewis,67,235613,True,
+4,BAD INTENTIONS,Neoni,34,192750,False,
+4,Strange Days,Three Days Grace,51,190508,False,post-grunge
+4,Goliath,Woodkid,37,228490,False,
+4,"""DEVILS NEVER CRY""(スタッフロール)",Capcom Sound Team,59,319906,False,japanese vgm
+4,Mantra,JENNIE,80,136627,True,k-pop
+4,So Cynical (Badum),LE SSERAFIM,64,155488,False,k-pop
+4,il vento d'oro,Yugo Kanno,63,295575,False,anime
+4,BBoom BBoom,MOMOLAND,64,208863,False,k-pop
+4,BAAM,MOMOLAND,59,208474,False,k-pop
+4,"The Bomb Run - From ""Dr. Strangelove""",The City of Prague Philharmonic Orchestra,24,134626,False,orchestral
+4,The Red Army Is the Strongest,Alexandrov Red Army Choir,48,164280,False,
+4,We'll Meet Again,Vera Lynn,62,183893,False,adult standards
+4,The Third Man Theme ( Studio Version),Anton Karas,25,135627,False,
+4,Pugna cum maga,梶浦 由記,30,137253,False,anime
+4,Moon Presence,SIE Sound Team,37,164786,False,japanese vgm
+4,Dragonlord Placidusax,Tai Tomisawa,34,233000,False,soundtrack
+4,7 rings,Ariana Grande,86,178626,True,pop
+4,"thank u, next",Ariana Grande,82,207320,True,pop
+4,Into You,Ariana Grande,77,244453,False,pop
+4,"Ebrietas, Daughter of the Cosmos",SIE Sound Team,35,237826,False,japanese vgm
+4,TruE,HOYO-MiX,58,187500,False,soundtrack
+4,Cyberangel - 遊戲《崩壞3》印象曲,HOYO-MiX,46,180480,False,soundtrack
+4,Oaths - Honkai Impact 3rd - A Post-Honkai Odyssey OST,HOYO-MiX,42,240344,False,soundtrack
+4,Starfall - Honkai Impact 3rd Ost - Impressions,TIA RAY,47,191052,False,gufeng
+4,Oracle,HOYO-MiX,45,200141,False,soundtrack
+4,"American Horror Story Theme - From ""American Horror Story""",César Dávila-Irizarry,40,186387,False,
+3,Pink Venom,BLACKPINK,74,186964,False,k-pop
+3,That That (prod.&feat. SUGA of BTS),PSY,70,174646,False,k-pop
+3,Castle,Halsey,66,277623,False,
+3,Bomb A Head!Returns!,m.c.A・T,35,253500,False,anime
+3,How You Like That,BLACKPINK,76,182956,False,k-pop
+3,Pretty Savage,BLACKPINK,72,201122,False,k-pop
+3,Bet You Wanna (feat. Cardi B),BLACKPINK,60,161167,False,k-pop
+3,Lovesick Girls,BLACKPINK,72,194765,False,k-pop
+3,LALISA,LISA,69,200689,False,k-pop
+3,Say So,Doja Cat,79,237894,True,
+3,Nice Try,Nevertel,29,219000,False,metalcore
+3,Eleanor Rigby,The Beatles,60,125226,False,classic rock
+3,Like That,ATEEZ,43,93289,False,k-pop
+3,Blank Space,Taylor Swift,75,231826,False,
+3,Shake It Off,Taylor Swift,71,219200,False,
+3,Bad Blood,Taylor Swift,66,200106,False,
+3,Look What You Made Me Do,Taylor Swift,78,211853,False,
+3,Echo,Crusher-P,57,230028,False,vocaloid
