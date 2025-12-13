@@ -43,7 +43,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn import tree
 from sklearn import linear_model
 from sklearn.ensemble import RandomForestRegressor
-
+from sklearn.tree import export_graphviz
+from IPython.display import Image
+import graphviz
+from IPython.display import display
+import matplotlib.pyplot as plt
 
 filepath = sys.argv[1]
 percent = float(sys.argv[2])
@@ -233,7 +237,7 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
     MAEval = 10000000
 
     for rate in [0.0001, 0.001, 0.01, 0.1]:
-        for neurons in [2, 50, 75, 100, 150, 175, 200, 256]:
+        for neurons in [2, 50, 100, 150, 200, 256]:
             network = create_network(seed, dataset, neurons)
             MAE = train_network(network, training_X, training_y, rate)
             if(MAE < MAEval):
@@ -268,8 +272,37 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
 
     
 
-    regr = RandomForestRegressor(max_depth = 12, criterion = "absolute_error")
+    regr = RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
     regr.fit(training_X, training_y)
     predictions = regr.predict(testing_X)
     MAE = mean_absolute_error(valid_y, predictions)
     print(MAE)
+
+    def log_tree(tree, dataset, dataset_filename, train_percentage, seed):
+        # create the filename of the new image
+        filename = ("tree"
+                    + "_" + dataset_infile[:-4]
+                    + "_1t"
+                    + "_" + str(int(train_percentage * 100)) + "p"
+                    + "_" + str(seed) + ".png")
+
+        # get the names of the attribute    s
+        attributes = list(dataset.drop("label", axis=1))
+
+        # get the values of the labels
+        labels = sorted(list(dataset["label"].unique()))
+
+        # create the image
+        fig = plt.figure(figsize=(100, 100))
+        plotted = sklearn.tree.plot_tree(tree,
+                                        feature_names=attributes,
+                                        class_names=labels,
+                                        filled=True,
+                                        rounded=True)
+
+        # save the image to file
+        fig.savefig(filename)
+
+
+
+
