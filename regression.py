@@ -43,10 +43,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn import tree
 from sklearn import linear_model
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.tree import export_graphviz
-from IPython.display import Image
-import graphviz
-from IPython.display import display
 import matplotlib.pyplot as plt
 
 filepath = sys.argv[1]
