@@ -266,8 +266,10 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #create validation from training
     training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
 
-    regr = RandomForestRegressor()
+    
+
+    regr = RandomForestRegressor(max_depth = 12, criterion = "absolute_error")
     regr.fit(training_X, training_y)
     predictions = regr.predict(testing_X)
     MAE = mean_absolute_error(valid_y, predictions)
-
+    print(MAE)
