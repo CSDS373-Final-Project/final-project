@@ -266,7 +266,8 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #create validation from training
     training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
 
-    
+    print(training_X)
+    print(testing_X)
 
     regr = RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
     regr.fit(training_X, training_y)
