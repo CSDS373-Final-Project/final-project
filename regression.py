@@ -241,6 +241,8 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
                 bestneurons = neurons
 
     print(MAEval)
+    print(bestrate)
+    print(bestneurons)
 
 if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #read in csv
@@ -277,13 +279,21 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     if(filepath == "maddy_playlist_data.csv"):
         training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.34)
 
+    MAEval = 10000000
     
-
-    regr = RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
-    regr.fit(training_X, training_y)
-    predictions = regr.predict(testing_X)
-    MAE = mean_absolute_error(valid_y, predictions)
-    print(MAE)
+    for trees in [50, 100, 150, 200]:
+        for depth in [3, 10, 20, 30]:
+            regr = RandomForestRegressor(random_state = seed, n_estimators = trees, criterion = "absolute_error", max_depth = depth)
+            regr.fit(training_X, training_y)
+            predictions = regr.predict(testing_X)
+            MAE = mean_absolute_error(valid_y, predictions)
+            if(MAE < MAEval):
+                MAEval = MAE
+                besttrees = trees
+                bestdepth = depth
+    print(MAEval)
+    print(besttrees)
+    print(bestdepth)
 
     def log_tree(tree, dataset, dataset_filename, train_percentage, seed):
         # create the filename of the new image
