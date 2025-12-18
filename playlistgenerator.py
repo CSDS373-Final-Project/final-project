@@ -12,6 +12,7 @@ Outputs:
 """
 
 import sys
+import sklearn
 
 """
 Processes Command Line Arguments
@@ -61,7 +62,10 @@ def create_csv():
     pass
 
 def run_model():
-    pass
+    regr = sklearn.RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
+    regr.fit(training_X, training_y)
+    predictions = regr.predict(testing_X)
+    MAE = mean_absolute_error(valid_y, predictions)
 
 def print_model():
     pass

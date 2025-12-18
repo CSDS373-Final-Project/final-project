@@ -4,7 +4,7 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Another Innocent Girl,Alkaline Trio,35,217773,True,pop punk
 5,Another Travelin' Song,Bright Eyes,41,256242,False,indie folk
 5,At the Bottom of Everything,Bright Eyes,50,273886,False,indie folk
-5,AVOCADO (feat. Gliiico),CHAEYOUNG,61,141078,False,
+5,AVOCADO (feat. Gliiico),CHAEYOUNG,60,141078,False,
 5,"Blood, Hair, And Eyeballs",Alkaline Trio,41,180573,True,pop punk
 5,Blood Sweat & Tears,BTS,75,217051,False,k-pop
 5,Blue Valentine,NMIXX,77,186000,False,k-pop
@@ -13,7 +13,7 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,California,Grimes,47,198337,False,art pop
 5,The Calendar Hung Itself…,Bright Eyes,36,236013,False,indie folk
 5,Calling All Skeletons,Alkaline Trio,27,211053,False,pop punk
-5,Clavicle,Alkaline Trio,23,158960,False,pop punk
+5,Clavicle,Alkaline Trio,22,158960,False,pop punk
 5,Close to Me,The Get Up Kids,35,204506,False,midwest emo
 5,Cop,Alkaline Trio,20,138666,False,pop punk
 5,the cost of giving up,Poppy,65,197849,False,
@@ -32,7 +32,7 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Forever For Her (Is Over For Me),The White Stripes,36,195466,False,garage rock
 5,Franco Un-American,NOFX,50,145466,False,punk
 5,Friday I'm in Love,The Cure,71,214400,False,new wave
-5,from me to u (feat. Poppy),BABYMETAL,62,204526,True,j-rock
+5,from me to u (feat. Poppy),BABYMETAL,61,204526,True,j-rock
 5,Get Rid of That Girl,The Donnas,23,100666,False,riot grrrl
 5,Ghost of Chicago,Noah Floersch,55,187100,False,
 5,The Ghost of You,My Chemical Romance,75,194253,False,emo
@@ -40,12 +40,12 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Good Fucking Bye,Matt Skiba,40,152066,False,
 5,Harness Your Hopes,Lavalove,17,206998,False,
 5,Heart Attack,AOA,56,196522,False,k-pop
-5,Heart Attack (츄),LOONA,60,194941,False,k-pop
+5,Heart Attack (츄),LOONA,61,194941,False,k-pop
 5,Helena,My Chemical Romance,80,204733,False,emo
 5,Hi High,LOONA,48,196863,False,k-pop
 5,"Holland, 1945",Neutral Milk Hotel,60,192533,False,anti-folk
 5,"Honey, This Mirror Isn't Big Enough for the Two of Us",My Chemical Romance,63,231096,True,emo
-5,Hotel Yorba,The White Stripes,52,130333,False,garage rock
+5,Hotel Yorba,The White Stripes,51,130333,False,garage rock
 5,I / Me / Myself,Will Wood,59,291715,True,
 5,I Just Threw Out The Love Of My Dreams,Weezer,72,157960,False,alternative rock
 5,I Just,Red Velvet,44,188304,False,k-pop
@@ -57,7 +57,7 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,In Hell,Japanese Breakfast,42,158358,False,
 5,Impurities,LE SSERAFIM,61,196365,False,k-pop
 5,In the Aeroplane Over the Sea,Neutral Milk Hotel,67,202346,False,anti-folk
-5,Into the New World,Girls' Generation,63,265760,False,k-pop
+5,Into the New World,Girls' Generation,64,265760,False,k-pop
 5,Into You,Ariana Grande,77,244453,False,pop
 5,It Ain't Me Babe,New Found Glory,29,167946,False,pop punk
 5,Jet Black,Jawbreaker,36,313933,False,emo
@@ -84,7 +84,7 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,minnesota is a place that exists,glaive,49,138000,True,hyperpop
 5,Mr.Mr.,Girls' Generation,59,235434,False,k-pop
 5,My Hometown - Dirty,Bowling For Soup,32,182200,True,pop punk
-5,My Queen (feat. Spiritbox),BABYMETAL,60,200698,True,j-rock
+5,My Queen (feat. Spiritbox),BABYMETAL,59,200698,True,j-rock
 5,My Ordinary Life,The Living Tombstone,73,230893,False,
 5,My Standard Break from Life,Alkaline Trio,35,154080,False,pop punk
 5,My Radio Is Telling Me To Kill (The Guys On My Radio),Boris the Sprinkler,4,166000,False,ska punk
@@ -99,14 +99,14 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Old Soul Song (for the New World Order),Bright Eyes,42,269160,False,indie folk
 5,オトノケ - Otonoke,Creepy Nuts,76,185626,False,anime
 5,Out of the Box,NAOKI,40,262227,False,
-4,Lover I Don't Have to Love,Bright Eyes,45,239800,False,indie folk
-4,Beachboy,McCafferty,65,199341,True,midwest emo
+4,Lover I Don't Have to Love,Bright Eyes,46,239800,False,indie folk
+4,Beachboy,McCafferty,66,199341,True,midwest emo
 4,Bottom,McCafferty,68,225019,True,midwest emo
-4,I Held Her In My Arms,Alkaline Trio,21,163920,False,pop punk
+4,I Held Her In My Arms,Alkaline Trio,20,163920,False,pop punk
 4,Perfection Can't Please Me,AISHA,42,304440,False,
 4,Drift,NAOKI,48,346680,False,
 4,"break up with your girlfriend, i'm bored",Ariana Grande,76,190440,True,pop
-4,Literal Legend,Ayesha Erotica,68,164728,True,hyperpop
+4,Literal Legend,Ayesha Erotica,69,164728,True,hyperpop
 4,Dye It Red,beabadoobee,49,189932,True,bedroom pop
 4,LET'S NOT FALL IN LOVE,BIGBANG,64,211926,False,k-pop
 4,Bored to Death,blink-182,63,235613,False,pop punk
@@ -143,7 +143,10 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 4,bet u wanna,Sabrina Carpenter,65,191025,False,pop
 4,Two Time,Jack Stauber's Micropop,69,139850,False,
 4,Baby Hotline,Jack Stauber's Micropop,71,291317,False,
-4,Pretty U,SEVENTEEN,64,207299,False,k-pop
+4,Pretty U,SEVENTEEN,65,207299,False,k-pop
+4,The Bidding,Tally Hall,66,160613,False,
+4,Siren,SUNMI,46,199133,False,k-pop
+4,Rewind,Wonder Girls,70,213480,False,k-pop
 3,I'd Rather Sleep,Kero Kero Bonito,66,115352,False,
 3,Fish Bowl,Kero Kero Bonito,33,105521,False,
 3,Heard a Song,Kero Kero Bonito,32,199082,False,
@@ -153,14 +156,22 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 3,cliché,mxmtoon,50,184272,False,bedroom pop
 3,prom dress,mxmtoon,67,197933,False,bedroom pop
 3,2004 Breakup,The Gentle Men,38,211322,True,
+3,Are You Satisfied?,MARINA,69,198960,False,
+3,Hermit the Frog,MARINA,58,213560,True,
+3,Welcome to Tally Hall,Tally Hall,48,310560,False,
+3,Strange,Toshi,14,207886,True,k-rap
+3,Pretty Girl,Clairo,76,178352,False,bedroom pop
 2,Bless Your Heart,Megan Moroney,66,163633,False,country
-2,Why Do You Let Me Stay Here?,She & Him,67,150506,False,christmas
+2,Why Do You Let Me Stay Here?,She & Him,68,150506,False,christmas
+2,JUMP,BLACKPINK,90,164718,False,k-pop
+2,Pretty Savage,BLACKPINK,72,201122,False,k-pop
+2,BIRTHDAY,JEON SOMI,50,185796,False,k-pop
 1,Thirsty,AJR,46,182158,False,
 1,High Hopes,Panic! At The Disco,81,190946,False,emo
 1,Made You Look,Meghan Trainor,74,134256,False,
 1,WOMAN’S WORLD,Katy Perry,58,163000,False,pop
 1,Smile,Katy Perry,52,166898,False,pop
-1,CASE 143,Stray Kids,72,191964,False,k-pop
+1,CASE 143,Stray Kids,73,191964,False,k-pop
 1,Cotton Eye Joe,Rednex,61,193826,False,
 1,Change My Clothes,Dream,54,186358,False,
 1,"Hey Look Ma, I Made It",Panic! At The Disco,66,169666,False,emo
@@ -169,10 +180,12 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 1,I Don't Have To Try,Avril Lavigne,42,197266,True,
 1,Actually Romantic,Taylor Swift,88,163699,True,
 1,Wood,Taylor Swift,88,150517,True,
-1,CANCELLED!,Taylor Swift,88,211498,True,
+1,CANCELLED!,Taylor Swift,87,211498,True,
 1,I Don't Care (with Justin Bieber),Ed Sheeran,75,219946,False,soft pop
 1,"So Long, London",Taylor Swift,55,262974,False,
-1,100 Bad Days,AJR,65,212783,False,
+1,100 Bad Days,AJR,64,212783,False,
 1,Born Again (feat. Doja Cat & RAYE),LISA,79,231174,True,k-pop
 1,FXCK UP THE WORLD (feat. Future),LISA,71,184155,True,k-pop
 1,NO,Meghan Trainor,79,213506,False,
+1,Ice Cream (with Selena Gomez),BLACKPINK,62,175813,False,k-pop
+1,Ice Cream,JEON SOMI,54,180742,False,k-pop
