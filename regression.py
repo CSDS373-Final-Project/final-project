@@ -51,6 +51,8 @@ seed = int(sys.argv[3])
 minmax = sys.argv[4]
 model = sys.argv[5]
 
+
+
 #function to check if alpha or space, created from stackoverflow
 def isalpha_or_space(self):
     if self == "":
@@ -215,16 +217,13 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
     #read in csv
     dataset = pandas.read_csv(filepath)
 
-    #convert non numerical data to numerical data
-    for column in dataset:
-        columnSeriesObj = dataset[column]
-        if(column != "label"):
-            first_value = dataset[column].values[0]
-            value = str(first_value)
-            if(isalpha_or_space(value)):
-                onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
+    for label, dtype in dataset.dtypes.items():
+            #Categorical if not int or float
+            if dtype!="int64" and dtype!="float64":
+                #Perform one hot encodings for categorical variables
+                column = label
+                onehots = pandas.get_dummies(dataset[column], prefix=column, drop_first=True, dtype=int)
                 dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
-
     if(minmax == True):
         dataset = scale_dataset(dataset)
 
@@ -247,15 +246,24 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #read in csv
     dataset = pandas.read_csv(filepath)
 
-    #one-hot encoding
-    for column in dataset:
-        columnSeriesObj = dataset[column]
-        if(column != "label"):
-            first_value = dataset[column].values[0]
-            value = str(first_value)
-            if(isalpha_or_space(value)):
-                onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
+    for label, dtype in dataset.dtypes.items():
+            #Categorical if not int or float
+            if dtype!="int64" and dtype!="float64":
+                #Perform one hot encodings for categorical variables
+                column = label
+                onehots = pandas.get_dummies(dataset[column], prefix=column, drop_first=True, dtype=int)
                 dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
+
+
+    # #one-hot encoding
+    # for column in dataset:
+    #     columnSeriesObj = dataset[column]
+    #     if(column != "label"):
+    #         first_value = dataset[column].values[0]
+    #         value = str(first_value)
+    #         if(isalpha_or_space(value)):
+    #             onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
+    #             dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
     if(minmax == True):
         dataset = scale_dataset(dataset)
@@ -266,8 +274,7 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #create validation from training
     training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
 
-    print(training_X)
-    print(testing_X)
+    
 
     regr = RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
     regr.fit(training_X, training_y)

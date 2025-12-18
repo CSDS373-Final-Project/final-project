@@ -62,7 +62,7 @@ def create_csv():
     pass
 
 def run_model():
-    regr = sklearn.RandomForestRegressor(random_state = seed, n_estimators = 200, criterion = "absolute_error")
+    regr = sklearn.RandomForestRegressor(random_state = 12345, n_estimators = 200, criterion = "absolute_error")
     regr.fit(training_X, training_y)
     predictions = regr.predict(testing_X)
     MAE = mean_absolute_error(valid_y, predictions)
