@@ -247,12 +247,12 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     dataset = pandas.read_csv(filepath)
 
     for label, dtype in dataset.dtypes.items():
-            #Categorical if not int or float
-            if dtype!="int64" and dtype!="float64":
-                #Perform one hot encodings for categorical variables
-                column = label
-                onehots = pandas.get_dummies(dataset[column], prefix=column, drop_first=True, dtype=int)
-                dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
+        #Categorical if not int or float
+        if dtype!="int64" and dtype!="float64":
+            #Perform one hot encodings for categorical variables
+            column = label
+            onehots = pandas.get_dummies(dataset[column], prefix=column, drop_first=True, dtype=int)
+            dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
 
     # #one-hot encoding
@@ -272,7 +272,10 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     training_X, training_y, testing_X, testing_y = create_data(dataset, percent, seed)
 
     #create validation from training
-    training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
+    if(filepath == "maxann_playlist_data.csv"):
+        training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.3336)
+    if(filepath == "maddy_playlist_data.csv"):
+        training_X, training_y, valid_X, valid_y = create_validation(training_X, training_y, 0.34)
 
     
 
