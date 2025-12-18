@@ -198,7 +198,7 @@ def create_csv(playlists,ratings):
 Chooses 10k songs from test file
 """
 def process_test_file():
-    test_data = pandas.read_csv("test114k.csv")
+    test_data = pandas.read_csv("test11k.csv")
     test_data = one_hots(test_data)
     shuffled = test_data.sample(frac=1)
     test_data = shuffled[:100]
@@ -262,9 +262,11 @@ def one_hots(dataset):
 
 #3 depth #tree_num 50
 def run_model(training_x, training_y, testing_x, testing_y):
+    testing_x = testing_x.reindex(columns=training_x.columns, fill_value=0)
     regr = sklearn.ensemble.RandomForestRegressor(n_estimators = 50, criterion = "absolute_error", max_depth = 3)
     regr.fit(training_x, training_y)
     predictions = regr.predict(testing_x)
+
     results={}
     prediction_index = 0
     for song in testing_y:
