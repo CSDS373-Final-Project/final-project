@@ -196,7 +196,7 @@ def train_network(network, training_X, training_y, rate, verbose=False):
 
     # calculate the MAE
     MAE = torch.mean(torch.abs(predictions - valid_y)).item()
-    return MAE
+    return MAE, predictions
 
 
 #function to check if alpha or space, created from stackoverflow
@@ -234,7 +234,7 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
     for rate in [0.0001, 0.001, 0.01, 0.1]:
         for neurons in [2, 50, 100, 150, 200, 256]:
             network = create_network(seed, dataset, neurons)
-            MAE = train_network(network, training_X, training_y, rate)
+            MAE, predictions = train_network(network, training_X, training_y, rate)
             if(MAE < MAEval):
                 MAEval = MAE
                 bestrate = rate
@@ -244,6 +244,21 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
     print(bestrate)
     print(bestneurons)
 
+
+    # calculate the MAE
+    testing_y = torch.from_numpy(testing_y.values).long()
+    total = 0
+    for i in range(len(predictions)):
+        x = predictions[i]
+        y = testing_y[i]
+        x = x.item()
+        y = y.item()
+        temp = abs(x - y)
+        temp = temp - MAEval
+        temp = temp ** 2
+        total += temp
+
+    print(total)
 if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     #read in csv
     dataset = pandas.read_csv(filepath)
@@ -294,6 +309,19 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     print(MAEval)
     print(besttrees)
     print(bestdepth)
+
+    #calculating VMAE for confidence interval
+    total = 0
+    testing_y = testing_y.tolist()
+    for i in range(len(predictions)):
+        x = predictions[i]
+        y = testing_y[i]
+        temp = abs(x - y)
+        temp = temp - MAEval
+        temp = temp ** 2
+        total += temp
+
+    print(total)
 
     def log_tree(tree, dataset, dataset_filename, train_percentage, seed):
         # create the filename of the new image
