@@ -198,12 +198,15 @@ def create_csv(playlists,ratings):
 Chooses 10k songs from test file
 """
 def process_test_file():
+    #Used Copilot GPT 5 to find out how to get information stored at index i printed to the terminal
     test_data = pandas.read_csv("test11k.csv")
-    test_data = one_hots(test_data)
     shuffled = test_data.sample(frac=1)
-    test_data = shuffled[:100]
+    selected_raw = shuffled.iloc[:100].copy()
+    # keep metadata for display
+    song_metadata = selected_raw[["track_name", "artists", "track_genre"]].copy()
+    test_data = one_hots(selected_raw)
     # test_data = scale_dataset(test_data)
-    return test_data
+    return test_data, song_metadata
     
 # """
 # Performs min max normalization
@@ -261,7 +264,7 @@ def one_hots(dataset):
 
 
 #3 depth #tree_num 50
-def run_model(training_x, training_y, testing_x, testing_y):
+def run_model(training_x, training_y, testing_x, song_meta):
     testing_x = testing_x.reindex(columns=training_x.columns, fill_value=0)
     regr = sklearn.ensemble.RandomForestRegressor(n_estimators = 50, criterion = "absolute_error", max_depth = 3)
     regr.fit(training_x, training_y)
@@ -269,12 +272,14 @@ def run_model(training_x, training_y, testing_x, testing_y):
 
     results={}
     prediction_index = 0
-    for song in testing_y:
-        rating = round(predictions[prediction_index])
-        if rating in results:
-            results[rating].append(song)
+    print(testing_x)
+    for i, pred in enumerate(predictions):  
+        row = song_meta.iloc[i]
+        song_display = f"{row.track_name} — {row.artists}"
+        if pred in results:
+            results[pred].append(song_display)
         else:
-            results[rating] = [song]
+            results[pred] = [song_display]
 
         prediction_index+=1
     return results
@@ -287,15 +292,16 @@ def print_model():
     pass
 
 def main():
-    test_data = process_test_file()
+    test_data, song_metadata = process_test_file()
     path, song_num, include_rate = process_input()
     train_data = pandas.read_csv(path)
     train_data = one_hots(train_data)
     train_data = train_data.sample(frac = 1)
     train_x, train_y, test_x, test_y = split_data(train_data, test_data)
 
-    results = run_model(train_x, train_y, test_x, test_y)
+    results = run_model(train_x, train_y, test_x, song_metadata)
     print(results)
+
 
 
 
