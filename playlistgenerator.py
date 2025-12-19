@@ -17,7 +17,7 @@ import spotipy
 import pandas
 from spotipy.oauth2 import SpotifyClientCredentials
 from pandas.api.types import is_numeric_dtype
-
+import numpy as np
 
    
 client_id = 'a681eb56d3674a7dbbfc3fc2b61ab419'
@@ -208,22 +208,6 @@ def process_test_file():
     # test_data = scale_dataset(test_data)
     return test_data, song_metadata
     
-# """
-# Performs min max normalization
-# """
-# def scale_dataset(dataset):
-#     dataset_new = dataset.copy()
-#     # skip first column (label) and non-numeric columns
-#     for col in dataset_new.columns[1:]:
-#         if not is_numeric_dtype(dataset_new[col]):
-#             continue
-#         maximum = dataset_new[col].max()
-#         minimum = dataset_new[col].min()
-#         if maximum == minimum:
-#             dataset_new[col] = float(minimum)
-#         else:
-#             dataset_new[col] = (dataset_new[col] - minimum) / (maximum - minimum)
-#     return dataset_new
 """
 """
 def split_data(train_data, test_data):
@@ -237,20 +221,6 @@ def split_data(train_data, test_data):
 
     return train_x, train_y, test_x, test_y
 
-# def create_validation(train_x, train_y, percent):
-#     # find the split point between training and validation
-#     training_n = train_x.shape[0]
-#     valid_rows = int(percent * training_n)
-
-#     # create the validation set
-#     valid_X = train_x.iloc[:valid_rows]
-#     valid_y = train_y.iloc[:valid_rows]
-
-#     # create the (smaller) training set
-#     train_X = train_x.iloc[valid_rows:]
-#     train_y = train_y.iloc[valid_rows:]
-
-#     return train_X, train_y, valid_X, valid_y
 
 def one_hots(dataset):
     for label, dtype in dataset.dtypes.items():
@@ -270,26 +240,29 @@ def run_model(training_x, training_y, testing_x, song_meta):
     regr.fit(training_x, training_y)
     predictions = regr.predict(testing_x)
 
-    results={}
+    results=[]
     prediction_index = 0
-    print(testing_x)
     for i, pred in enumerate(predictions):  
         row = song_meta.iloc[i]
         song_display = f"{row.track_name} — {row.artists}"
-        if pred in results:
-            results[pred].append(song_display)
-        else:
-            results[pred] = [song_display]
-
+        tuple = (pred, song_display)
+        results.append(tuple)
         prediction_index+=1
     return results
 
-def decide_songs(results, song_num):
-    pass
+def print_playlist(results, song_num, include_rate):
+    sorted_data = sorted(results, key=lambda x: (x[0], x[1]), reverse= True) 
+    song_subset = sorted_data[:song_num]
+    print()
+    print("Playlist Generation Complete")
+    print("="*50)
+    print("Playlist: ")
+    iter_count = 1
+    for val,song in song_subset:
+        formatted_string = str(iter_count) + ". " + str(song) + " Estimated rating: " + str(val) + "/5" + "\n"
+        print(formatted_string)
+        iter_count+=1
 
-
-def print_model():
-    pass
 
 def main():
     test_data, song_metadata = process_test_file()
@@ -300,9 +273,7 @@ def main():
     train_x, train_y, test_x, test_y = split_data(train_data, test_data)
 
     results = run_model(train_x, train_y, test_x, song_metadata)
-    print(results)
-
-
+    print_playlist(results, song_num, include_rate)
 
 
 if __name__ == '__main__':
