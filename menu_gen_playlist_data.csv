@@ -1,0 +1,101 @@
+label,track_name,artist,popularity,duration,explicit,track_genre
+5,Non-Stop,Leslie Odom Jr.,74,385438,False,musicals
+5,History Has Its Eyes on You,Christopher Jackson,68,97050,False,musicals
+5,Hungover in Jonestown,Amigo the Devil,47,202986,False,southern gothic
+5,Like Him (feat. Lola Young),"Tyler, The Creator",86,278014,True,
+5,St. Chroma (feat. Daniel Caesar),"Tyler, The Creator",78,197019,True,
+5,To Ashes and Blood (from the series Arcane League of Legends),Arcane,70,245626,False,
+5,Ma Meilleure Ennemie (from the series Arcane League of Legends),Arcane,77,147973,False,
+5,Rapp Snitch Knishes,MF DOOM,75,172893,True,experimental hip hop
+5,Lovers Rock,TV Girl,88,213920,False,
+5,Let Down,Radiohead,90,299560,False,art rock
+5,The Dripping Tap,King Gizzard & The Lizard Wizard,3,1097013,False,neo-psychedelic
+5,Magenta Mountain,King Gizzard & The Lizard Wizard,5,364599,False,neo-psychedelic
+5,Worlds Collide (Inspired by Arcane League of Legends),JVKE,55,182173,False,
+5,Stephanie,Nafeesisboujee,82,126969,True,
+5,The Line (from the series Arcane League of Legends),Arcane,77,192000,False,
+5,heart pt. 6,Kendrick Lamar,73,292461,True,hip hop
+5,gloria (with sza),Kendrick Lamar,71,287522,True,hip hop
+5,luther (with sza),Kendrick Lamar,84,177598,False,hip hop
+5,reincarnated,Kendrick Lamar,72,275740,True,hip hop
+5,BEST INTEREST,"Tyler, The Creator",76,127921,True,
+5,Hoe Cakes,MF DOOM,74,234146,True,experimental hip hop
+5,One Beer,MF DOOM,72,258586,True,experimental hip hop
+5,Deep Fried Frenz,MF DOOM,58,299626,True,experimental hip hop
+5,Guinnessez,MF DOOM,52,281720,True,experimental hip hop
+5,Kon Queso,MF DOOM,57,240266,True,experimental hip hop
+5,From The Start,Laufey,88,169573,False,
+5,The King and Eye,CZARFACE,37,146626,True,
+5,Above The Chinese Restaurant,Laufey,53,223173,False,
+5,Everything I Know About Love,Laufey,52,209706,False,
+5,All Caps,Madvillain,70,130479,True,experimental hip hop
+5,Dreamer,Laufey,56,210826,False,
+5,Second Best,Laufey,55,204813,False,
+5,Haunted,Laufey,53,200626,False,
+5,Must Be Love,Laufey,52,184960,False,
+5,While You Were Sleeping,Laufey,53,177493,False,
+5,Lovesick,Laufey,54,225360,False,
+5,California and Me,Laufey,52,216306,False,
+5,Nocturne (Interlude),Laufey,50,144066,False,
+5,Promise,Laufey,58,234266,False,
+5,From The Start,Laufey,55,169573,False,
+5,Misty,Laufey,51,209800,False,
+5,Serendipity,Laufey,51,219906,False,
+5,Letter To My 13 Year Old Self,Laufey,54,262680,False,
+5,Bewitched,Laufey,53,246693,False,
+5,Bored,Laufey,71,213213,False,
+5,Trouble,Laufey,61,171760,False,
+5,It Could Happen To You,Laufey,60,127853,False,
+5,Goddess,Laufey,66,267866,True,
+5,Tough Luck,Laufey,51,192866,True,
+5,Lover Girl,Laufey,78,164400,False,
+5,Taking What's Not Yours,TV Girl,80,205650,False,
+5,My Way Of Life,Frank Sinatra,68,187360,False,christmas
+5,undressed,sombr,84,182088,False,
+5,back to friends,sombr,93,199032,False,
+5,Somethin' Stupid,Frank Sinatra,79,162493,False,christmas
+5,Clementine,grentperez,63,245400,False,
+5,Betty,AJR,58,163666,True,
+5,The Contract,Twenty One Pilots,65,228000,False,
+5,INERTIA,SawanoHiroyuki[nZk],65,199486,False,anime
+5,Alright,Kendrick Lamar,80,219333,True,hip hop
+5,Rain In My Heart,Frank Sinatra,60,201866,False,christmas
+5,Maybe Man,AJR,59,220093,True,
+5,Mercy Me,Alkaline Trio,55,169573,False,pop punk
+5,Cringe,Alkaline Trio,24,144186,False,pop punk
+5,This Addiction,Alkaline Trio,37,154866,False,pop punk
+5,Calling All Skeletons,Alkaline Trio,27,211053,False,pop punk
+5,Private Eye,Alkaline Trio,21,227360,False,pop punk
+5,I Found Away,Alkaline Trio,40,240760,True,pop punk
+5,This Addiction - Acoustic,Alkaline Trio,18,157533,False,pop punk
+5,This Could Be Love,Alkaline Trio,22,266200,False,pop punk
+5,Nose Over Tail,Alkaline Trio,23,162000,False,pop punk
+5,Radio,Alkaline Trio,23,323186,False,pop punk
+5,Radio,Alkaline Trio,54,281040,False,pop punk
+5,Dethbed,Alkaline Trio,39,183533,False,pop punk
+5,Next Semester,Twenty One Pilots,69,234400,False,
+5,Your Neck,Alkaline Trio,33,195693,False,pop punk
+5,ARE WE STILL FRIENDS?,"Tyler, The Creator",83,265480,True,
+5,The Room Where It Happens,Leslie Odom Jr.,71,318214,False,musicals
+5,Navigating,Twenty One Pilots,70,223106,False,
+5,Touchy Feely Fool,AJR,57,215000,True,
+5,Oldies Station,Twenty One Pilots,65,228000,False,
+5,I Hope You Find Your Way Home,"Tyler, The Creator",65,269704,True,
+5,That's Life,Frank Sinatra,74,187040,False,christmas
+5,"VIRGINIA Boy (feat. Tyler, The Creator) - Remix",Pharrell Williams,50,128843,True,
+5,Rock Star,N.E.R.D,0,261193,False,
+5,Big Poe (feat. Sk8brd),"Tyler, The Creator",73,182401,True,
+5,Sugar On My Tongue,"Tyler, The Creator",89,153332,True,
+5,Sucka Free,"Tyler, The Creator",72,161051,True,
+5,Mommanem,"Tyler, The Creator",69,75386,True,
+5,Stop Playing With Me,"Tyler, The Creator",69,133307,True,
+5,Ring Ring Ring,"Tyler, The Creator",79,201869,True,
+5,Don't Tap That Glass / Tweakin',"Tyler, The Creator",69,222124,True,
+5,Don't You Worry Baby (feat. Madison McFerrin),"Tyler, The Creator",73,178135,True,
+5,I'll Take Care of You (feat. Yebba),"Tyler, The Creator",77,200860,True,
+5,Tell Me What It Is,"Tyler, The Creator",66,202133,False,
+5,I THINK,"Tyler, The Creator",74,212016,True,
+5,RUNNING OUT OF TIME,"Tyler, The Creator",74,177219,True,
+5,EXACTLY WHAT YOU RUN FROM YOU END UP CHASING,"Tyler, The Creator",14,14626,False,
+5,A BOY IS A GUN*,"Tyler, The Creator",70,210253,True,
+5,"GONE, GONE / THANK YOU","Tyler, The Creator",75,375386,True,

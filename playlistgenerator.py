@@ -27,9 +27,13 @@ client_credentials_manager = SpotifyClientCredentials(client_id=client_id, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) #spotify object to access API
 
 """
-Processes Command Line Arguments
+Processes Command Line Arguments 
+Calls menu if none
 Inputs: None
-Outputs:
+Outputs: 
+    #path: String- A path to file containing data based on user preferences (given datasets: maxann_playlist_data.csv and maddy_playlist_data.csv)
+    #song_num: Int- The number of songs you'd like to generate in your playlist
+    #include_rate: Bool- Include prediction of how much the algorithm predicts you will like a given song
 """
 
 def process_input():
@@ -67,44 +71,61 @@ def process_input():
 
 """
 Prints a menu if a user wishes to use their own music
+Inputs: 
+    None
+
+Outputs: 
+    #path_name: String- A path to file containing data based on user preferences (given datasets: maxann_playlist_data.csv and maddy_playlist_data.csv)
+    #song_num: Int- The number of songs you'd like to generate in your playlist
+    #include_rate: Bool- Include prediction of how much the algorithm predicts you will like a given song
 """
 def menu():
+    print()
     print("Welcome to playlistgenerator.py! Please follow the next prompts to generate.")
+    print()
+    print("="*50)
+    print()
     done = False
     playlists=[]
     ratings = []
     while not done: 
-        print("Please note that this algorithm works best if you have at least 3 playlists with each playlist corresponding to a rating 1-5")
-        url = input("Please enter a spotifyplaylist url in the form: open.spotify.com/playlist/7dKIzrS0qkRFFveqvXBRuX. Hit enter to stop inputting playlists.")       
+        print()
+        url = input("Please enter a spotifyplaylist url in the form -- https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF -- Hit enter to stop inputting playlists: ")       
         #Signifies user wants to quit menu
         if url=="":
             #Requires user to input at least one playlist
             if len(playlists)==0:
+                print()
                 print("Please input at least one playlist")
             else:
                 done = True
         else:
             parts = url.split("/")
             #Playlist id should be 22 characters long
-            if len(parts[2])==22:
-                playlists.append(parts[2])
+            if "playlist" in parts: 
+                playlist_id = parts[-1].split("?")[0]
+                playlists.append(playlist_id)
             else:
-                print("Playlist id is invalid.")
+                print()
+                print("Playlist id is private or invalid.")
     
     play_index = 0
     while len(ratings)!=len(playlists):
         results = sp.playlist(playlists[play_index], fields="name")
         play_name = results["name"]
         try: 
-            rating = int(input(f"Assign a rating to the songs in the playlist '{play_name}': "))
+            print()
+            rating = int(input(f"Assign a rating to the songs in the playlist '{play_name}':  "))
 
             if 1<=rating<=5:
                 ratings.append(rating)
                 play_index+=1
             else:
+                print()
                 print("Invalid rating; expected rating from 1-5, but got", rating)
                 continue
         except ValueError:
+            print()
             print("Expected integer value for rating, but got ", rating)
             continue
     
@@ -113,28 +134,34 @@ def menu():
     valid = False
     while not valid:
         try:
-            song_num = int(input("How many songs should be in the new playlist?"))
+            print()
+            song_num = int(input("How many songs should be in the new playlist: "))
             valid = True
         except ValueError:
+            print()
             print("Expected int value for song_num, but got ", song_num)
         
     boolean = False
     while not boolean:
-        include_rate = input("Should the model include the model's predicted rating?")
+        print()
+        include_rate = input("Should the model include the model's predicted rating: ")
 
         include_rate = include_rate.lower()
         if include_rate.startswith("t"):
             include_rate = True
+            boolean = True
         elif include_rate.startswith("f"):
             include_rate = False
+            boolean = True
 
         else:
+            print()
             print("Unexpected value for include_rate variable; expected 'true' or 'false', but got", include_rate, " Please try again.")
     return path_name, song_num, include_rate
         
 
 """
-
+Creates csv file if user is not using prewritten data
 """
 def create_csv(playlists,ratings):
     combined_data = pandas.DataFrame()
@@ -191,24 +218,24 @@ def create_csv(playlists,ratings):
         #Concatenates data 
         combined_data = pandas.concat([combined_data, new_dataframe])
     #Creates new csv file with resulting dataframe - index is false because we don't want extra column telling us row index
-    combined_data.to_csv("new_playlist_data.csv", index = False)
-    return "new_playlist_data.csv"
+    combined_data.to_csv("menu_gen_playlist_data.csv", index = False)
+    return "menu_gen_playlist_data.csv"
 
 """
-Chooses 10k songs from test file
+Processes test11k.csv 
 """
 def process_test_file():
     #Used Copilot GPT 5 to find out how to get information stored at index i printed to the terminal
     test_data = pandas.read_csv("test11k.csv")
     shuffled = test_data.sample(frac=1)
-    selected_raw = shuffled.iloc[:100].copy()
     # keep metadata for display
-    song_metadata = selected_raw[["track_name", "artists", "track_genre"]].copy()
-    test_data = one_hots(selected_raw)
+    song_metadata = shuffled[["track_name", "artists", "track_genre"]].copy()
+    test_data = one_hots(shuffled)
     # test_data = scale_dataset(test_data)
     return test_data, song_metadata
     
 """
+Splits training and testing data
 """
 def split_data(train_data, test_data):
     # split the training attributes and labels
@@ -221,7 +248,9 @@ def split_data(train_data, test_data):
 
     return train_x, train_y, test_x, test_y
 
-
+"""
+Performs one hot encoing
+"""
 def one_hots(dataset):
     for label, dtype in dataset.dtypes.items():
         #Categorical if not int or float
@@ -232,8 +261,10 @@ def one_hots(dataset):
             dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
     return dataset
 
-
-#3 depth #tree_num 50
+"""
+Runs Random Forest Regressor- Makes label predictions
+"""
+#Best results from regression: 3 depth #tree_num 50
 def run_model(training_x, training_y, testing_x, song_meta):
     testing_x = testing_x.reindex(columns=training_x.columns, fill_value=0)
     regr = sklearn.ensemble.RandomForestRegressor(n_estimators = 50, criterion = "absolute_error", max_depth = 3)
@@ -250,20 +281,32 @@ def run_model(training_x, training_y, testing_x, song_meta):
         prediction_index+=1
     return results
 
+"""
+Chooses the top rated songs and outputs them to terminal
+"""
 def print_playlist(results, song_num, include_rate):
     sorted_data = sorted(results, key=lambda x: (x[0], x[1]), reverse= True) 
-    song_subset = sorted_data[:song_num]
+    song_subset=[]
+    for song in sorted_data:
+        if song not in song_subset:
+            song_subset.append(song)
+        if len(song_subset) == song_num:
+            break
     print()
-    print("Playlist Generation Complete")
+    print("Playlist Generation Complete!!!")
     print("="*50)
+    print()
     print("Playlist: ")
+    print()
     iter_count = 1
     for val,song in song_subset:
-        formatted_string = str(iter_count) + ". " + str(song) + " Estimated rating: " + str(val) + "/5" + "\n"
+        formatted_string = str(iter_count) + ". " + str(song) + " - Estimated rating: " + str(val) + "/5" + "\n"
         print(formatted_string)
         iter_count+=1
 
-
+"""
+Runs everything else
+"""
 def main():
     test_data, song_metadata = process_test_file()
     path, song_num, include_rate = process_input()
@@ -274,6 +317,8 @@ def main():
 
     results = run_model(train_x, train_y, test_x, song_metadata)
     print_playlist(results, song_num, include_rate)
+    print()
+    print("="*50)
 
 
 if __name__ == '__main__':
