@@ -224,9 +224,9 @@ def create_csv(playlists,ratings):
 """
 Processes test11k.csv 
 """
-def process_test_file():
+def process_test_file(file):
     #Used Copilot GPT 5 to find out how to get information stored at index i printed to the terminal
-    test_data = pandas.read_csv("test11k.csv")
+    test_data = pandas.read_csv(file)
     shuffled = test_data.sample(frac=1)
     # keep metadata for display
     song_metadata = shuffled[["track_name", "artists", "track_genre"]].copy()
@@ -308,7 +308,16 @@ def print_playlist(results, song_num, include_rate):
 Runs everything else
 """
 def main():
-    test_data, song_metadata = process_test_file()
+    print()
+    done = False
+    while not done:
+        try:
+            file = input("Enter the file you'd like to generate from: ")
+            test_data, song_metadata = process_test_file(file)
+            done = True
+        except FileNotFoundError:
+            print("File ", file, " not found, please try again.")
+
     path, song_num, include_rate = process_input()
     train_data = pandas.read_csv(path)
     train_data = one_hots(train_data)

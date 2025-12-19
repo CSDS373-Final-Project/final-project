@@ -29,7 +29,7 @@ def main():
 
 
     #Loop through possible ratings
-    labels = [5,4,3,2,1]
+    labels = [5,4,3]
     label_index=0
 
     #Create dataframe to concat data from multiple playlists to 
@@ -86,7 +86,7 @@ def main():
                 #Reminder that this starts at index 0, which is 5
                 "label": labels[label_index],
                 "track_name": track_name,
-                "artist": artist['name'],
+                "artists": artist['name'],
                 "popularity": popularity,
                 "duration": duration,
                 "explicit": explicit,

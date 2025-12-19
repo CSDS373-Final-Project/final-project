@@ -86,7 +86,7 @@ def main():
                 #Reminder that this starts at index 0, which is 5
                 "label": labels[label_index],
                 "track_name": track_name,
-                "artist": artist['name'],
+                "artists": artist['name'],
                 "popularity": popularity,
                 "duration": duration,
                 "explicit": explicit,

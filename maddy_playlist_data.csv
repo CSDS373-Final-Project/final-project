@@ -1,4 +1,4 @@
-label,track_name,artist,popularity,duration,explicit,track_genre
+label,track_name,artists,popularity,duration,explicit,track_genre
 5,Accendio,IVE,62,192013,False,k-pop
 5,All The Small Things,blink-182,82,167066,False,pop punk
 5,Another Innocent Girl,Alkaline Trio,35,217773,True,pop punk
@@ -6,9 +6,6 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,At the Bottom of Everything,Bright Eyes,50,273886,False,indie folk
 5,AVOCADO (feat. Gliiico),CHAEYOUNG,60,141078,False,
 5,"Blood, Hair, And Eyeballs",Alkaline Trio,41,180573,True,pop punk
-5,Blood Sweat & Tears,BTS,75,217051,False,k-pop
-5,Blue Valentine,NMIXX,77,186000,False,k-pop
-5,Break the Chain,The Bridge City Sinners,51,191610,False,folk punk
 5,Bubble Pop!,HyunA,54,212244,False,k-pop
 5,California,Grimes,47,198337,False,art pop
 5,The Calendar Hung Itself…,Bright Eyes,36,236013,False,indie folk
@@ -23,7 +20,6 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,"Dine, Dine My Darling - Acoustic",Alkaline Trio,16,179586,False,pop punk
 5,Does He Love You?,Rilo Kiley,38,313400,False,indie pop
 5,Down,blink-182,56,183786,False,pop punk
-5,"Eve, Psyche & The Bluebeard’s wife",LE SSERAFIM,73,185538,False,k-pop
 5,Every Thug Needs A Lady,Alkaline Trio,29,221960,False,pop punk
 5,Extras,Molly Daisy Scarpine,51,338709,False,
 5,Genie,Girls' Generation,53,230546,False,k-pop
@@ -36,7 +32,6 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Get Rid of That Girl,The Donnas,23,100666,False,riot grrrl
 5,Ghost of Chicago,Noah Floersch,55,187100,False,
 5,The Ghost of You,My Chemical Romance,75,194253,False,emo
-5,Gimme Chocolate!!,BABYMETAL,64,230613,False,j-rock
 5,Good Fucking Bye,Matt Skiba,40,152066,False,
 5,Harness Your Hopes,Lavalove,17,206998,False,
 5,Heart Attack,AOA,56,196522,False,k-pop
@@ -69,36 +64,35 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,Kingslayer (feat. BABYMETAL),Bring Me The Horizon,76,220041,True,metalcore
 5,Last Call Casualty,Bowling For Soup,35,211893,False,pop punk
 5,Let Me Carve Your Way,NAOKI,43,360356,False,
-5,Like a Cat,AOA,58,219533,False,k-pop
 5,Crush,Weki Meki,44,196179,False,k-pop
 5,Linoleum,NOFX,58,130266,False,punk
 5,Line Without a Hook,Ricky Montgomery,81,249586,False,
 5,Lola,The Raincoats,44,243506,False,riot grrrl
-5,Love Cherry Motion,LOONA,41,221847,False,k-pop
 5,Love the Subhuman Self,AISHA,52,308964,False,
 5,Ma Meilleure Ennemie (from the series Arcane League of Legends),Stromae,77,147973,False,french pop
-5,MAGO,GFRIEND,65,199133,False,k-pop
-5,Me Gustas Tu,GFRIEND,64,220745,False,k-pop
-5,Megitsune,BABYMETAL,59,247586,False,j-rock
 5,Mercy Me,Alkaline Trio,25,182466,False,pop punk
-5,minnesota is a place that exists,glaive,49,138000,True,hyperpop
 5,Mr.Mr.,Girls' Generation,59,235434,False,k-pop
 5,My Hometown - Dirty,Bowling For Soup,32,182200,True,pop punk
 5,My Queen (feat. Spiritbox),BABYMETAL,59,200698,True,j-rock
 5,My Ordinary Life,The Living Tombstone,73,230893,False,
 5,My Standard Break from Life,Alkaline Trio,35,154080,False,pop punk
 5,My Radio Is Telling Me To Kill (The Guys On My Radio),Boris the Sprinkler,4,166000,False,ska punk
-5,NEMONEMO,YENA,63,178026,False,k-pop
 5,Never Be the Same,Camila Cabello,79,226986,False,
 5,NEW MAGIC WAND,"Tyler, The Creator",78,195327,True,
 5,Nose Over Tail,Alkaline Trio,23,162000,False,pop punk
-5,Not Myself (feat. Zuzu),Adventure Time,52,60685,False,
 5,No Eyed Girl,Lemon Demon,38,260168,False,
 5,Olde English 800,Alkaline Trio,22,97413,False,pop punk
 5,"Love Love, Kiss Kiss",Alkaline Trio,36,205240,False,pop punk
 5,Old Soul Song (for the New World Order),Bright Eyes,42,269160,False,indie folk
-5,オトノケ - Otonoke,Creepy Nuts,76,185626,False,anime
-5,Out of the Box,NAOKI,40,262227,False,
+5,Pharmacist,Alvvays,43,124130,False,dream pop
+5,Pet Sematary,Starcrawler,40,203240,False,riot grrrl
+5,Pin,Grimes,49,212439,False,art pop
+5,The Places You Have Come to Fear the Most,Dashboard Confessional,39,174493,False,emo
+5,Portions for Foxes,Rilo Kiley,51,284640,False,indie pop
+5,Private Eye,Alkaline Trio,21,227360,False,pop punk
+5,Punk Rock Academy,Atom And His Package,21,134800,False,folk punk
+5,Punk Rock Girl,The Dead Milkmen,47,158333,False,punk
+5,Radio,Alkaline Trio,54,281040,False,pop punk
 4,Lover I Don't Have to Love,Bright Eyes,46,239800,False,indie folk
 4,Beachboy,McCafferty,66,199341,True,midwest emo
 4,Bottom,McCafferty,68,225019,True,midwest emo
@@ -147,6 +141,54 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 4,The Bidding,Tally Hall,66,160613,False,
 4,Siren,SUNMI,46,199133,False,k-pop
 4,Rewind,Wonder Girls,70,213480,False,k-pop
+4,1985,Bowling For Soup,71,193000,False,pop punk
+4,1985,Bowling For Soup,71,193000,False,pop punk
+4,Almost,Bowling For Soup,58,206160,True,pop punk
+4,Stacy's Mom,Bowling For Soup,58,193042,False,pop punk
+4,Ohio (Come Back To Texas),Bowling For Soup,54,230560,False,pop punk
+4,Punk Rock 101,Bowling For Soup,53,188320,False,pop punk
+4,Hello Kitty,Jazmin Bean,59,151400,True,
+4,The fifth season (SSFWL),OH MY GIRL,52,240386,False,k-pop
+4,CLOSER,OH MY GIRL,48,207413,False,k-pop
+4,jellyous,ILLIT,75,163243,False,k-pop
+4,Strawberry Rush,CHUU,55,176240,False,k-pop
+4,FIESTA,IZ*ONE,61,217760,False,k-pop
+4,Bad Things (with Camila Cabello),mgk,72,239293,False,
+4,It's Been So Long,The Living Tombstone,77,174394,False,
+4,Basics in Behavior - Blue Version,The Living Tombstone,61,237751,False,
+4,Happy Place,ZAMination,58,146006,False,
+4,Just Monika: a Doki Doki Literature Club Song,Random Encounters,54,226736,False,
+4,Alone Infection,NAOKI,44,271969,False,
+4,Alexander Hamilton,Leslie Odom Jr.,74,236737,False,musicals
+4,BxMxC,BABYMETAL,57,183025,False,j-rock
+4,Concrete,Poppy,18,200743,False,
+4,The Gravity,Naoki Hashimoto,42,404047,False,
+4,Symphony,NAOKI,50,356034,False,
+4,99,MOB CHOIR,61,237386,False,anime
+4,99.9,MOB CHOIR,57,188706,False,anime
+4,I Only Eat Candy,Nerf Herder,14,196866,False,
+4,Juliet - Live at Hoxton Hall,Cavetown,29,323677,False,bedroom pop
+4,All My Friends Are Dead,Turbonegro,51,158426,False,norsk rock
+4,Talking To Myself,The Linda Lindas,31,142124,False,riot grrrl
+4,Claudia Kishi,The Linda Lindas,25,100540,False,riot grrrl
+4,Cabinet Man,Lemon Demon,56,262739,False,
+4,High School Yum Yum,The Donnas,5,86440,False,riot grrrl
+4,I Don't Wanna Go to School,The Donnas,6,124333,False,riot grrrl
+4,Pool Party,The Aquabats!,39,255600,False,ska
+4,Red Sweater!,The Aquabats!,38,204026,False,ska
+4,Do The Sprinkler,Boris the Sprinkler,1,74040,False,ska punk
+4,Shopping Spree,Atom And His Package,7,191453,False,folk punk
+4,Undercover Funny,Atom And His Package,11,128906,False,folk punk
+4,Anarchy Means I Litter,Atom And His Package,15,160040,False,folk punk
+4,Neutral Spirit Hotel,Local News Legend,36,88706,True,folk punk
+4,I Saw a Ghost,the tenth,3,109377,False,
+4,An Idea For A Movie,The Vandals,39,159093,False,punk
+4,Do The Sprinkler,Boris the Sprinkler,1,74040,False,ska punk
+4,Los Angeles,blink-182,44,183266,False,pop punk
+4,Home Is Such a Lonely Place,blink-182,52,201480,False,pop punk
+4,Twin Size Mattress,The Front Bottoms,71,264676,False,midwest emo
+4,Lone Star,The Front Bottoms,61,230050,False,midwest emo
+4,False Teeth,Worst Party Ever,17,158388,False,midwest emo
 3,I'd Rather Sleep,Kero Kero Bonito,66,115352,False,
 3,Fish Bowl,Kero Kero Bonito,33,105521,False,
 3,Heard a Song,Kero Kero Bonito,32,199082,False,
@@ -161,31 +203,89 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 3,Welcome to Tally Hall,Tally Hall,48,310560,False,
 3,Strange,Toshi,14,207886,True,k-rap
 3,Pretty Girl,Clairo,76,178352,False,bedroom pop
-2,Bless Your Heart,Megan Moroney,66,163633,False,country
-2,Why Do You Let Me Stay Here?,She & Him,68,150506,False,christmas
-2,JUMP,BLACKPINK,90,164718,False,k-pop
-2,Pretty Savage,BLACKPINK,72,201122,False,k-pop
-2,BIRTHDAY,JEON SOMI,50,185796,False,k-pop
-1,Thirsty,AJR,46,182158,False,
-1,High Hopes,Panic! At The Disco,81,190946,False,emo
-1,Made You Look,Meghan Trainor,74,134256,False,
-1,WOMAN’S WORLD,Katy Perry,58,163000,False,pop
-1,Smile,Katy Perry,52,166898,False,pop
-1,CASE 143,Stray Kids,73,191964,False,k-pop
-1,Cotton Eye Joe,Rednex,61,193826,False,
-1,Change My Clothes,Dream,54,186358,False,
-1,"Hey Look Ma, I Made It",Panic! At The Disco,66,169666,False,emo
-1,21st Century Girl,BTS,64,192596,False,k-pop
-1,Banana Allergy Monkey,OH MY GIRL BANHANA,32,223739,False,
-1,I Don't Have To Try,Avril Lavigne,42,197266,True,
-1,Actually Romantic,Taylor Swift,88,163699,True,
-1,Wood,Taylor Swift,88,150517,True,
-1,CANCELLED!,Taylor Swift,87,211498,True,
-1,I Don't Care (with Justin Bieber),Ed Sheeran,75,219946,False,soft pop
-1,"So Long, London",Taylor Swift,55,262974,False,
-1,100 Bad Days,AJR,64,212783,False,
-1,Born Again (feat. Doja Cat & RAYE),LISA,79,231174,True,k-pop
-1,FXCK UP THE WORLD (feat. Future),LISA,71,184155,True,k-pop
-1,NO,Meghan Trainor,79,213506,False,
-1,Ice Cream (with Selena Gomez),BLACKPINK,62,175813,False,k-pop
-1,Ice Cream,JEON SOMI,54,180742,False,k-pop
+3,This Town,Niall Horan,57,232600,False,
+3,Perfect,One Direction,82,230341,False,
+3,It's Dangerous to Go Alone,Starbomb,45,161436,True,comedy
+3,Cabo,Ricky Montgomery,54,147760,False,
+3,Choice,Jack Stauber's Micropop,62,39591,False,
+3,Baby Hotline,Jack Stauber's Micropop,71,291317,False,
+3,Lovers of Loving Love,The Aquabats!,28,162666,False,ska
+3,Boys Will Be Bugs - Live at Hoxton Hall,Cavetown,34,279625,True,bedroom pop
+3,Lemon Boy,Cavetown,62,272902,False,bedroom pop
+3,Eighth Wonder,Lemon Demon,50,282126,False,
+3,we fell in love in october,girl in red,87,184153,False,bedroom pop
+3,girls,girl in red,43,198400,False,bedroom pop
+3,i wanna be your girlfriend,girl in red,48,204990,False,bedroom pop
+3,Happy Birthday Ralph,Atom And His Package,9,142853,False,folk punk
+3,Sheena's Got a Microwave,Boris the Sprinkler,7,140293,False,ska punk
+3,Daisy,Ashnikko,67,146523,True,
+3,STUPID (feat. Yung Baby Tate),Ashnikko,64,167317,True,
+3,Deal With It (feat. Kelis),Ashnikko,60,191149,True,
+3,Dancing Queen,ABBA,85,230400,False,
+3,PA PA YA!!,BABYMETAL,54,235159,False,j-rock
+3,Cloud 9,Beach Bunny,72,147350,False,
+3,I'm Just Your Problem (feat. Olivia Olson),Adventure Time,60,116811,False,
+3,Dropdown Rainbow,Adventure Time,20,41244,False,
+3,"Good Little Girl (feat. Donald Glover, Madeleine Martin & Roz Ryan)",Adventure Time,57,111159,False,
+3,Part of the Madness (feat. Rebecca Sugar),Adventure Time,52,134572,False,
+3,Crazy Rap (Colt 45 & 2 Zig Zags),Afroman,71,328666,True,
+3,Agust D,Agust D,69,234082,True,k-pop
+3,give it to me,Agust D,62,149524,True,k-pop
+3,Tony Montana (Feat. Yankie),Agust D,58,207873,True,k-pop
+3,so far away (Feat. SURAN),Agust D,64,358270,True,k-pop
+3,it boy,bbno$,71,146426,True,
+3,two,bbno$,73,135212,True,
+3,24/Seven,Big Time Rush,57,189546,False,
+3,Hurricane,Bridgit Mendler,69,243986,False,
+3,Please Please Please,Sabrina Carpenter,80,186365,True,pop
+3,ballad of a homeschooled girl,Olivia Rodrigo,70,203369,False,
+3,get him back!,Olivia Rodrigo,76,211141,True,
+3,love is embarrassing,Olivia Rodrigo,74,154516,True,
+3,"jealousy, jealousy",Olivia Rodrigo,81,173160,False,
+3,Good Graces,Sabrina Carpenter,78,185265,True,pop
+3,Taste,Sabrina Carpenter,87,157279,False,pop
+3,my tears ricochet,Taylor Swift,80,255893,False,
+3,Fortnight (feat. Post Malone),Taylor Swift,82,228965,False,
+3,Just One Day,BTS,51,239469,False,k-pop
+3,Rain,BTS,61,264666,False,k-pop
+3,Danger,BTS,67,245140,False,k-pop
+3,Gimmie Love,Carly Rae Jepsen,41,202232,False,
+3,I Really Like You,Carly Rae Jepsen,65,204773,False,
+3,Vanilla Twilight,Owl City,63,231706,False,
+3,Fireflies,Owl City,79,228346,False,
+3,The Subway,Chappell Roan,86,252276,True,
+3,Be Sweet,Japanese Breakfast,67,195370,False,
+3,Washing Machine Heart,Mitski,83,128198,False,
+3,Nobody,Mitski,75,193429,False,
+3,Sex Sells,Lovejoy,56,246124,True,
+3,One Day,Lovejoy,58,144374,True,
+3,Rät,Penelope Scott,71,194165,True,
+3,Marlboro Nights,Lonely God,69,68522,False,
+3,Backyard Boy,Claire Rosinkranz,63,129240,False,
+3,space girl (feat. chloe moriondo),Frances Forever,38,232600,False,bedroom pop
+3,National Anthem,Lana Del Rey,60,230520,False,
+3,That Funny Feeling,Bo Burnham,58,301110,False,comedy
+3,Blah Blah Blah,The Oozes,56,232000,True,riot grrrl
+3,Flamingo,Kero Kero Bonito,55,197528,False,
+3,New Year’s Day,Taylor Swift,71,235466,False,
+3,Brooklyn Baby,Lana Del Rey,84,351640,True,
+3,Off To The Races,Lana Del Rey,47,299920,False,
+3,Diet Mountain Dew,Lana Del Rey,48,222920,False,
+3,Break It Off - Bonus,PinkPantheress,73,96133,False,bedroom pop
+3,Bingle Bangle,AOA,44,221778,False,k-pop
+3,Excuse Me,AOA,53,224948,False,k-pop
+3,WHISTLE,BLACKPINK,73,211631,False,k-pop
+3,Really,BLACKPINK,59,197789,False,k-pop
+3,Sad Sad Situation - Dirty,Bowling For Soup,28,145760,True,pop punk
+3,Really Might Be Gone - Dirty,Bowling For Soup,27,223333,True,pop punk
+3,No Longer,Boris the Sprinkler,2,114440,False,ska punk
+3,"Dear Maria, Count Me In",All Time Low,80,182826,False,pop punk
+3,What the World Needs,Tiffany Tatreau,56,183549,False,musicals
+3,Converse High,BTS,60,209715,False,k-pop
+3,Love Is Not Over (Full Length Edition),BTS,58,221619,False,k-pop
+3,IV. Sweatpants,Childish Gambino,66,180675,True,
+3,DNA.,Kendrick Lamar,51,185946,False,hip hop
+3,Disaster,Conan Gray,62,153096,False,
+3,"Dance, Dance",Fall Out Boy,78,180266,False,emo
+3,DANCE DANCE,DAY6,45,223190,False,k-rock
+3,Bonnie & Clyde,DEAN,55,224606,False,k-rap

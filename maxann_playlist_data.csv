@@ -1,4 +1,4 @@
-label,track_name,artist,popularity,duration,explicit,track_genre
+label,track_name,artists,popularity,duration,explicit,track_genre
 5,Toxic,Britney Spears,86,198800,False,pop
 5,Gabriela,KATSEYE,94,197226,False,k-pop
 5,Not Like Us,Kendrick Lamar,88,274192,True,hip hop
