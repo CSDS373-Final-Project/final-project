@@ -60,6 +60,9 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 5,"Wrath of Man (From ""Honkai: Star Rail”) - Mydei Theme",tnbee,28,194000,False,japanese vgm
 5,"Deadly Romance (From ""Honkai: Star Rail"") - Aglaea Theme",tnbee,30,184000,False,japanese vgm
 5,...Baby One More Time,Britney Spears,84,211066,False,pop
+5,Moonlight Legend,DALI,49,175573,False,anime
+5,It's Going Down Now,Azumi Takahashi,74,186093,False,japanese vgm
+5,Last Surprise,Lyn,65,235546,False,japanese vgm
 4,Gameboy,KATSEYE,76,185598,False,k-pop
 4,Dance The Night,Dua Lipa,70,176579,False,pop
 4,Your Color,HOYO-MiX,40,158379,False,soundtrack
@@ -155,3 +158,11 @@ label,track_name,artist,popularity,duration,explicit,track_genre
 3,Bad Blood,Taylor Swift,66,200106,False,
 3,Look What You Made Me Do,Taylor Swift,79,211853,False,
 3,Echo,Crusher-P,57,230028,False,vocaloid
+3,Bitter / Sweet Cantarella,Phyrnna,1,223503,False,
+3,Hexennacht,Phyrnna,29,202507,False,
+3,Los! Los! Los!,ターニャ・デグレチャフ(CV:悠木碧),46,217746,False,anime
+3,DDU-DU DDU-DU,BLACKPINK,74,211350,False,k-pop
+3,As If It's Your Last,BLACKPINK,78,213264,False,k-pop
+3,Crazy Scary Holy Fantasy,MYTH & ROID,39,199453,False,anime
+3,Sour Candy (with BLACKPINK),Lady Gaga,62,157706,False,art pop
+3,I'm Gonna Show You Crazy,Bebe Rexha,45,207775,True,
