@@ -61,6 +61,13 @@ def isalpha_or_space(self):
         if not (char.isalpha() or char.isspace()):
             return False
     return True
+def compute_ci(mae, n):
+    p = mae/100
+    se = math.sqrt(p*(1-p)/n)
+    lower = p-1.96*se
+    upper = p+1.96*se
+    print(lower*100,upper*100)
+
 
 #scales dataset with minmax normalization
 def scale_dataset(dataset):
@@ -239,7 +246,7 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
                 MAEval = MAE
                 bestrate = rate
                 bestneurons = neurons
-
+    compute_ci(MAEval, dataset.size)
     print(MAEval)
     print(bestrate)
     print(bestneurons)
@@ -309,6 +316,7 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
     print(MAEval)
     print(besttrees)
     print(bestdepth)
+    compute_ci(MAEval, dataset.size)
 
     #calculating VMAE for confidence interval
     total = 0
@@ -322,6 +330,8 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
         total += temp
 
     print(total)
+
+
 
     def log_tree(tree, dataset, dataset_filename, train_percentage, seed):
         # create the filename of the new image

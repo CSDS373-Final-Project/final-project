@@ -248,6 +248,20 @@ def split_data(train_data, test_data):
 
     return train_x, train_y, test_x, test_y
 
+
+def scale_dataset(dataset):
+    dataset_new = dataset.copy()
+    for i in range(1, len(dataset_new.columns)):
+        col = dataset_new.columns[i]
+        maximum = dataset_new[col][dataset_new[col].argmax()]
+        minimum = dataset_new[col][dataset_new[col].argmin()]
+        if(maximum == minimum):
+            dataset_new[col] = float(minimum)
+        else:
+            dataset_new[col] = (dataset_new[col] - minimum) / (maximum - minimum)
+    return dataset_new
+
+
 """
 Performs one hot encoing
 """
@@ -275,7 +289,7 @@ def run_model(training_x, training_y, testing_x, song_meta):
     prediction_index = 0
     for i, pred in enumerate(predictions):  
         row = song_meta.iloc[i]
-        song_display = f"{row.track_name} — {row.artists}"
+        song_display = f"{row.track_name} — {row.artists} — Genre: {row.track_genre}"
         tuple = (pred, song_display)
         results.append(tuple)
         prediction_index+=1
@@ -286,6 +300,7 @@ Chooses the top rated songs and outputs them to terminal
 """
 def print_playlist(results, song_num, include_rate):
     sorted_data = sorted(results, key=lambda x: (x[0], x[1]), reverse= True) 
+    print(sorted_data)
     song_subset=[]
     for song in sorted_data:
         if song not in song_subset:
@@ -321,6 +336,8 @@ def main():
     path, song_num, include_rate = process_input()
     train_data = pandas.read_csv(path)
     train_data = one_hots(train_data)
+    train_data = scale_dataset(train_data)
+    test_data = scale_dataset(test_data)
     train_data = train_data.sample(frac = 1)
     train_x, train_y, test_x, test_y = split_data(train_data, test_data)
 
