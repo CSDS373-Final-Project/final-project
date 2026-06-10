@@ -236,7 +236,7 @@ if(model == "NeuralNet" or model == "neuralnet" or model == "Neuralnet" or model
 
     training_X, training_y, testing_X, testing_y = create_data(dataset, percent, seed)
 
-    MAEval = 10000000
+    MAEval = float('inf)
 
     for rate in [0.0001, 0.001, 0.01, 0.1]:
         for neurons in [2, 50, 100, 150, 200, 256]:
@@ -278,16 +278,6 @@ if(model == "forest" or model == "Forest" or model == "f" or model == "F"):
             onehots = pandas.get_dummies(dataset[column], prefix=column, drop_first=True, dtype=int)
             dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
-
-    # #one-hot encoding
-    # for column in dataset:
-    #     columnSeriesObj = dataset[column]
-    #     if(column != "label"):
-    #         first_value = dataset[column].values[0]
-    #         value = str(first_value)
-    #         if(isalpha_or_space(value)):
-    #             onehots = pandas.get_dummies(dataset[column], column, drop_first=True, dtype=int)
-    #             dataset = pandas.concat([dataset.drop(column, axis=1), onehots], axis=1)
 
     if(minmax == True):
         dataset = scale_dataset(dataset)
